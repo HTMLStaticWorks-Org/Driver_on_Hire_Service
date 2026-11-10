@@ -102,5 +102,20 @@ document.addEventListener('DOMContentLoaded', () => {
       }, 1000);
     });
   }
+
+  // Google & Apple OAuth Demo Sign-In / Sign-Up
+  document.querySelectorAll('.auth-social-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const provider = btn.getAttribute('data-oauth') || 'Social';
+      showToast(`${provider} authentication verified! Redirecting to dashboard...`, 'success');
+      localStorage.setItem('doh_user', JSON.stringify({
+        email: `${provider.toLowerCase()}.user@executive.com`,
+        name: `${provider} Customer`
+      }));
+      setTimeout(() => {
+        window.location.href = 'dashboard.html';
+      }, 900);
+    });
+  });
 });
 
