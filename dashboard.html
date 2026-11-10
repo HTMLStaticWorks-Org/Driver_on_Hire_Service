@@ -1,0 +1,632 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Customer Dashboard — Driver on Hire Service</title>
+  <meta name="description" content="Manage your chauffeur bookings, review assigned driver profiles, download GST tax receipts, and order on-demand drivers.">
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/dashboard.css">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='22' fill='%23FFFFFF'/><g transform='translate(5, 7.7) scale(0.9)'><path d='M15 67A40 40 0 1 1 86 64L79 59A32 32 0 1 0 21 62Z' fill='%230F294A'/><path d='M23 19A38 38 0 0 1 78 20A35 35 0 0 0 23 19Z' fill='%231B4F9C'/><path d='M16 40L14 48L25 51L26 46Z' fill='%230F294A'/><path d='M82 40L84 48L69 52L66 47Z' fill='%230F294A'/><path d='M46 43L52 35Q65 33 78 35L84 43L88 45L88 62L46 62Z' fill='%23FFFFFF'/><path d='M51 44L55 37Q65 35 76 37L80 44Z' fill='%230F294A'/><path d='M54 43L57 39Q65 38 74 39L77 43Z' fill='%23FFFFFF'/><rect x='47.5' y='41' width='4' height='3' rx='1' fill='%230F294A'/><rect x='79.5' y='41' width='4' height='3' rx='1' fill='%230F294A'/><path d='M48 45Q65 42 84 45L86 58Q86 61 82 61L48 61Z' fill='%230F294A'/><path d='M50 48L56 49L55 52L50 51Z' fill='%23FFFFFF'/><path d='M82 48L76 49L77 52L82 51Z' fill='%23FFFFFF'/><rect x='58' y='47.5' width='15' height='1.8' rx='0.9' fill='%23FFFFFF'/><rect x='58' y='50.5' width='15' height='1.8' rx='0.9' fill='%23FFFFFF'/><rect x='59' y='53.5' width='13' height='1.8' rx='0.9' fill='%23FFFFFF'/><rect x='56' y='57' width='19' height='2' rx='1' fill='%23FFFFFF'/><path d='M9 82L11 61Q15 55 21 53L19 31C19 20 47 20 47 31L45 53Q53 55 56 62L59 75Z' fill='%23FFFFFF'/><path d='M20 31C20 22 46 22 46 31L43 34L23 34Z' fill='%230F294A'/><path d='M23 29C25 24 41 24 43 29C39 27 27 27 23 29Z' fill='%231B4F9C'/><path d='M22 33Q33 31 44 33L43 35Q33 33 23 35Z' fill='%23FFFFFF'/><path d='M23 35Q33 39 43 35Q33 41 23 35Z' fill='%230F294A'/><path d='M23 37L23 47Q25 56 33 57Q41 56 43 47L43 37' fill='%23FFFFFF' stroke='%230F294A' stroke-width='2.2' stroke-linejoin='round'/><path d='M24 39H42V42Q42 46 38 46Q35 46 34 42H32Q31 46 28 46Q24 46 24 42Z' fill='%230F294A'/><path d='M10 80L12 63Q15 58 24 56L33 78L42 56Q51 58 54 63L57 74L22 84Z' fill='%230F294A'/><path d='M25 56L33 77L41 56Q33 59 25 56Z' fill='%23FFFFFF'/><path d='M31 59H35L36 63L33 78L30 63Z' fill='%232563EB'/><rect x='43' y='67' width='6' height='2' rx='1' fill='%23FFFFFF'/><path d='M6 92Q40 64 95 62L95 72Q60 76 50 94Z' fill='%23FFFFFF'/><path d='M10 90Q43 66 93 64Q51 70 25 89Z' fill='%2306B6D4'/><path d='M33 88Q53 71 91 66Q60 73 50 91Q42 87 33 88Z' fill='%230F294A'/></g></svg>">
+</head>
+<body>
+
+  <!-- ==========================================================================
+       CUSTOMER DASHBOARD MOBILE / TABLET NAVBAR (<= 1024px)
+       ========================================================================== -->
+  <header class="dash-mobile-header">
+    <a href="index.html" class="brand-logo dash-mobile-brand" aria-label="Driver on Hire Home 1">
+      <div class="logo-badge">
+        <svg viewBox="0 0 100 94" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M15 67A40 40 0 1 1 86 64L79 59A32 32 0 1 0 21 62Z" fill="#0F294A"/><path d="M23 19A38 38 0 0 1 78 20A35 35 0 0 0 23 19Z" fill="#1B4F9C"/><path d="M16 40L14 48L25 51L26 46Z" fill="#0F294A"/><path d="M82 40L84 48L69 52L66 47Z" fill="#0F294A"/><path d="M46 43L52 35Q65 33 78 35L84 43L88 45L88 62L46 62Z" fill="#FFFFFF"/><path d="M51 44L55 37Q65 35 76 37L80 44Z" fill="#0F294A"/><path d="M54 43L57 39Q65 38 74 39L77 43Z" fill="#FFFFFF"/><rect x="47.5" y="41" width="4" height="3" rx="1" fill="#0F294A"/><rect x="79.5" y="41" width="4" height="3" rx="1" fill="#0F294A"/><path d="M48 45Q65 42 84 45L86 58Q86 61 82 61L48 61Z" fill="#0F294A"/><path d="M50 48L56 49L55 52L50 51Z" fill="#FFFFFF"/><path d="M82 48L76 49L77 52L82 51Z" fill="#FFFFFF"/><rect x="58" y="47.5" width="15" height="1.8" rx="0.9" fill="#FFFFFF"/><rect x="58" y="50.5" width="15" height="1.8" rx="0.9" fill="#FFFFFF"/><rect x="59" y="53.5" width="13" height="1.8" rx="0.9" fill="#FFFFFF"/><rect x="56" y="57" width="19" height="2" rx="1" fill="#FFFFFF"/><path d="M9 82L11 61Q15 55 21 53L19 31C19 20 47 20 47 31L45 53Q53 55 56 62L59 75Z" fill="#FFFFFF"/><path d="M20 31C20 22 46 22 46 31L43 34L23 34Z" fill="#0F294A"/><path d="M23 29C25 24 41 24 43 29C39 27 27 27 23 29Z" fill="#1B4F9C"/><path d="M22 33Q33 31 44 33L43 35Q33 33 23 35Z" fill="#FFFFFF"/><path d="M23 35Q33 39 43 35Q33 41 23 35Z" fill="#0F294A"/><path d="M23 37L23 47Q25 56 33 57Q41 56 43 47L43 37" fill="#FFFFFF" stroke="#0F294A" stroke-width="2.2" stroke-linejoin="round"/><path d="M24 39H42V42Q42 46 38 46Q35 46 34 42H32Q31 46 28 46Q24 46 24 42Z" fill="#0F294A"/><path d="M10 80L12 63Q15 58 24 56L33 78L42 56Q51 58 54 63L57 74L22 84Z" fill="#0F294A"/><path d="M25 56L33 77L41 56Q33 59 25 56Z" fill="#FFFFFF"/><path d="M31 59H35L36 63L33 78L30 63Z" fill="#2563EB"/><rect x="43" y="67" width="6" height="2" rx="1" fill="#FFFFFF"/><path d="M6 92Q40 64 95 62L95 72Q60 76 50 94Z" fill="#FFFFFF"/><path d="M10 90Q43 66 93 64Q51 70 25 89Z" fill="#06B6D4"/><path d="M33 88Q53 71 91 66Q60 73 50 91Q42 87 33 88Z" fill="#0F294A"/></svg>
+      </div>
+      <div class="brand-text">
+        <span class="brand-title">Driver on Hire</span>
+        <span class="brand-subtitle">Customer Portal</span>
+      </div>
+    </a>
+
+    <button type="button" class="hamburger-btn dash-hamburger-btn" aria-label="Toggle dashboard navigation" aria-expanded="false" aria-controls="dashSidebarDrawer">
+      <span class="hamburger-line"></span>
+      <span class="hamburger-line"></span>
+      <span class="hamburger-line"></span>
+    </button>
+  </header>
+
+  <div class="sidebar-overlay dash-sidebar-overlay" aria-hidden="true"></div>
+
+  <!-- ==========================================================================
+       CUSTOMER DASHBOARD INTERFACE
+       ========================================================================== -->
+  <div class="dashboard-layout">
+    <!-- Dashboard Sidebar Navigation -->
+    <aside class="dash-sidebar" id="dashSidebarDrawer" aria-label="Dashboard Navigation">
+      <div class="dash-sidebar-header">
+        <a href="index.html" class="brand-logo dash-brand-logo" aria-label="Driver on Hire Home 1">
+          <div class="logo-badge">
+            <svg viewBox="0 0 100 94" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M15 67A40 40 0 1 1 86 64L79 59A32 32 0 1 0 21 62Z" fill="#0F294A"/><path d="M23 19A38 38 0 0 1 78 20A35 35 0 0 0 23 19Z" fill="#1B4F9C"/><path d="M16 40L14 48L25 51L26 46Z" fill="#0F294A"/><path d="M82 40L84 48L69 52L66 47Z" fill="#0F294A"/><path d="M46 43L52 35Q65 33 78 35L84 43L88 45L88 62L46 62Z" fill="#FFFFFF"/><path d="M51 44L55 37Q65 35 76 37L80 44Z" fill="#0F294A"/><path d="M54 43L57 39Q65 38 74 39L77 43Z" fill="#FFFFFF"/><rect x="47.5" y="41" width="4" height="3" rx="1" fill="#0F294A"/><rect x="79.5" y="41" width="4" height="3" rx="1" fill="#0F294A"/><path d="M48 45Q65 42 84 45L86 58Q86 61 82 61L48 61Z" fill="#0F294A"/><path d="M50 48L56 49L55 52L50 51Z" fill="#FFFFFF"/><path d="M82 48L76 49L77 52L82 51Z" fill="#FFFFFF"/><rect x="58" y="47.5" width="15" height="1.8" rx="0.9" fill="#FFFFFF"/><rect x="58" y="50.5" width="15" height="1.8" rx="0.9" fill="#FFFFFF"/><rect x="59" y="53.5" width="13" height="1.8" rx="0.9" fill="#FFFFFF"/><rect x="56" y="57" width="19" height="2" rx="1" fill="#FFFFFF"/><path d="M9 82L11 61Q15 55 21 53L19 31C19 20 47 20 47 31L45 53Q53 55 56 62L59 75Z" fill="#FFFFFF"/><path d="M20 31C20 22 46 22 46 31L43 34L23 34Z" fill="#0F294A"/><path d="M23 29C25 24 41 24 43 29C39 27 27 27 23 29Z" fill="#1B4F9C"/><path d="M22 33Q33 31 44 33L43 35Q33 33 23 35Z" fill="#FFFFFF"/><path d="M23 35Q33 39 43 35Q33 41 23 35Z" fill="#0F294A"/><path d="M23 37L23 47Q25 56 33 57Q41 56 43 47L43 37" fill="#FFFFFF" stroke="#0F294A" stroke-width="2.2" stroke-linejoin="round"/><path d="M24 39H42V42Q42 46 38 46Q35 46 34 42H32Q31 46 28 46Q24 46 24 42Z" fill="#0F294A"/><path d="M10 80L12 63Q15 58 24 56L33 78L42 56Q51 58 54 63L57 74L22 84Z" fill="#0F294A"/><path d="M25 56L33 77L41 56Q33 59 25 56Z" fill="#FFFFFF"/><path d="M31 59H35L36 63L33 78L30 63Z" fill="#2563EB"/><rect x="43" y="67" width="6" height="2" rx="1" fill="#FFFFFF"/><path d="M6 92Q40 64 95 62L95 72Q60 76 50 94Z" fill="#FFFFFF"/><path d="M10 90Q43 66 93 64Q51 70 25 89Z" fill="#06B6D4"/><path d="M33 88Q53 71 91 66Q60 73 50 91Q42 87 33 88Z" fill="#0F294A"/></svg>
+          </div>
+          <div class="brand-text">
+            <span class="brand-title">Driver on Hire</span>
+            <span class="brand-subtitle">Customer Portal</span>
+          </div>
+        </a>
+        <button type="button" class="sidebar-close-btn dash-drawer-close" aria-label="Close dashboard navigation">✕</button>
+      </div>
+
+      <div class="dash-user-badge">
+        <div class="dash-user-avatar">VR</div>
+        <div class="dash-user-details">
+          <h5>Welcome back,</h5>
+          <strong class="dynamic-user-name" style="color:var(--heading-color); font-size:1.05rem;">Vikramaditya</strong>
+          <p>Platinum Member &bull; Verified</p>
+        </div>
+      </div>
+
+      <nav class="dash-menu" aria-label="Dashboard Section Tabs">
+        <button type="button" class="dash-menu-item active" data-pane="overview">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg>
+          <span>Overview</span>
+        </button>
+
+        <button type="button" class="dash-menu-item" data-pane="book-driver">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 17h2c.6 0 1-.4 1-1v-3c0-.9-.7-1.7-1.5-1.9C18.7 10.6 16 10 16 10s-1.3-1.4-2.2-2.3c-.5-.4-1.1-.7-1.8-.7H5c-.6 0-1.1.4-1.4.9l-1.4 2.9A3 3 0 0 0 2 12v4c0 .6.4 1 1 1h2"/></svg>
+          <span>Book a Driver</span>
+        </button>
+
+        <button type="button" class="dash-menu-item" data-pane="my-bookings">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+          <span>My Bookings</span>
+        </button>
+
+        <button type="button" class="dash-menu-item" data-pane="assigned-drivers">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+          <span>Assigned Drivers</span>
+        </button>
+
+        <button type="button" class="dash-menu-item" data-pane="invoices">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><line x1="2" y1="10" x2="22" y2="10"/></svg>
+          <span>Invoices</span>
+        </button>
+
+        <button type="button" class="dash-menu-item" data-pane="profile">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg>
+          <span>Account Settings</span>
+        </button>
+
+        <div class="dash-sidebar-bottom">
+          <div class="dash-controls-row">
+            <button type="button" class="dash-control-btn theme-toggle-btn" aria-label="Toggle dark mode" title="Toggle Dark Mode">
+              <span class="theme-icon" aria-hidden="true"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg></span>
+            </button>
+            <button type="button" class="dash-control-btn rtl-toggle-btn" aria-label="Toggle text direction" title="Toggle RTL / LTR">
+              <span class="rtl-icon" aria-hidden="true"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 3 4 7l4 4"/><path d="M4 7h16"/><path d="m16 21 4-4-4-4"/><path d="M20 17H4"/></svg></span>
+            </button>
+          </div>
+
+          <button type="button" class="dash-menu-item dash-logout-btn" data-pane="logout">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"/><polyline points="16 17 21 12 16 7"/><line x1="21" y1="12" x2="9" y2="12"/></svg>
+            <span>Log Out</span>
+          </button>
+        </div>
+      </nav>
+    </aside>
+
+    <!-- Main Dashboard Content Area -->
+    <main class="dash-content">
+
+      <!-- ======================================================================
+           PANE 1: OVERVIEW
+           Upcoming Booking, Assigned Driver, Booking Status, Total Bookings,
+           Upcoming Trip, Invoice Summary
+           ====================================================================== -->
+      <section class="dash-pane active" id="overview">
+        <div class="dash-topbar">
+          <div>
+            <span class="eyebrow" style="margin-bottom:4px;">Customer Central</span>
+            <h2>Welcome back, <span class="dynamic-user-name">Vikramaditya</span></h2>
+            <p style="color:var(--text-muted);">Here is an overview of your active transportation bookings and assigned drivers.</p>
+          </div>
+          <button type="button" class="btn btn-primary mobile-cta-btn" onclick="document.querySelector('[data-pane=\'book-driver\']').click();">
+            <span>+ Book a Driver</span>
+          </button>
+        </div>
+
+        <!-- 4 Key Stat Cards -->
+        <div class="dash-stats-grid">
+          <div class="stat-card">
+            <div class="stat-icon" aria-hidden="true">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 17h2c.6 0 1-.4 1-1v-3c0-.9-.7-1.7-1.5-1.9C18.7 10.6 16 10 16 10s-1.3-1.4-2.2-2.3c-.5-.4-1.1-.7-1.8-.7H5c-.6 0-1.1.4-1.4.9l-1.4 2.9A3 3 0 0 0 2 12v4c0 .6.4 1 1 1h2"/><circle cx="7" cy="17" r="2"/><path d="M9 17h6"/><circle cx="17" cy="17" r="2"/></svg>
+            </div>
+            <div class="stat-info">
+              <p>Total Bookings</p>
+              <h3 id="totalBookingsCount">14</h3>
+            </div>
+          </div>
+
+          <div class="stat-card">
+            <div class="stat-icon" aria-hidden="true">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            </div>
+            <div class="stat-info">
+              <p>Preferred Driver</p>
+              <h3 style="font-size:1.25rem;">Rajesh Verma</h3>
+            </div>
+          </div>
+
+          <div class="stat-card">
+            <div class="stat-icon" aria-hidden="true">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="6" cy="19" r="3"/><path d="M9 19h8.5a3.5 3.5 0 0 0 0-7h-11a3.5 3.5 0 0 1 0-7H15"/><circle cx="18" cy="5" r="3"/></svg>
+            </div>
+            <div class="stat-info">
+              <p>Kilometers Driven</p>
+              <h3>3,420 km</h3>
+            </div>
+          </div>
+
+          <div class="stat-card">
+            <div class="stat-icon" aria-hidden="true">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="5" width="20" height="14" rx="2"/><line x1="2" y1="10" x2="22" y2="10"/></svg>
+            </div>
+            <div class="stat-info">
+              <p>Invoice Total</p>
+              <h3>₹24,850</h3>
+            </div>
+          </div>
+        </div>
+
+        <!-- Upcoming Booking Feature Banner -->
+        <div class="upcoming-booking-card">
+          <div>
+            <span class="status-pill status-confirmed" style="background:rgba(255,255,255,0.2); color:#FFFFFF; margin-block-end:10px;">Booking Status: Confirmed</span>
+            <h3 style="font-size:1.5rem; margin-block-end:8px;">Upcoming Trip: Full-Day Executive Chauffeur</h3>
+            <p style="font-size:0.95rem; line-height:1.6; margin-block-end:16px;">Reporting Today at 09:30 AM &bull; Pickup: Sector 44, Gurgaon &bull; Destination: Central Business District, New Delhi</p>
+            <div class="cta-btn-group" style="display:flex; gap:12px; flex-wrap:wrap;">
+              <button type="button" class="btn btn-white btn-sm" onclick="showToast('Chauffeur notified: Arriving at 09:15 AM (15 mins early).');">Call Chauffeur</button>
+              <button type="button" class="btn btn-outline btn-sm" style="color:#FFF; border-color:rgba(255,255,255,0.4);" onclick="showToast('Live vehicle tracking signal established.');">Track Live Location</button>
+            </div>
+          </div>
+
+          <div class="upcoming-driver-pill">
+            <div class="upcoming-driver-img" style="background:var(--accent-primary); color:#FFFFFF; display:flex; align-items:center; justify-content:center; font-weight:700; font-size:1.15rem; flex-shrink:0;">RV</div>
+            <div>
+              <h4 style="font-size:1.05rem; margin-block-end:2px;">Rajesh Verma</h4>
+              <p style="font-size:0.8rem; margin:0;">Senior Chauffeur &bull; DL-042018</p>
+              <span style="font-size:0.8rem; color:#FFE600; font-weight:700;">★ 4.98 Rating</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Recent Booking Table Preview -->
+        <div class="dash-card">
+          <div class="dash-card-header">
+            <h3>Recent Trip History</h3>
+            <button type="button" class="btn btn-outline btn-sm" onclick="document.querySelector('[data-pane=\'my-bookings\']').click();">View All</button>
+          </div>
+          <div class="table-responsive">
+            <table class="data-table">
+              <thead>
+                <tr>
+                  <th>Booking ID</th>
+                  <th>Date</th>
+                  <th>Service</th>
+                  <th>Assigned Driver</th>
+                  <th>Status</th>
+                  <th>Duration</th>
+                  <th>Amount</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><strong>#DOH-9021</strong></td>
+                  <td>Today, 09:30 AM</td>
+                  <td>Full-Day Executive</td>
+                  <td>Rajesh Verma</td>
+                  <td><span class="status-pill status-confirmed">Confirmed</span></td>
+                  <td>8 Hours</td>
+                  <td><strong>₹2,199</strong></td>
+                </tr>
+                <tr>
+                  <td><strong>#DOH-8910</strong></td>
+                  <td>06 Nov 2026</td>
+                  <td>Airport Meet & Greet</td>
+                  <td>Gurpreet Singh</td>
+                  <td><span class="status-pill status-completed">Completed</span></td>
+                  <td>Point to Point</td>
+                  <td><strong>₹1,499</strong></td>
+                </tr>
+                <tr>
+                  <td><strong>#DOH-8840</strong></td>
+                  <td>28 Oct 2026</td>
+                  <td>Outstation (Jaipur 2 Days)</td>
+                  <td>Karthik Selvan</td>
+                  <td><span class="status-pill status-completed">Completed</span></td>
+                  <td>2 Days</td>
+                  <td><strong>₹6,198</strong></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+
+      <!-- ======================================================================
+           PANE 2: BOOK A DRIVER
+           Fields: Service Type, Pickup Location, Destination, Date, Start Time,
+           Number of Hours, Vehicle Preference, Additional Instructions.
+           Show: Estimated Price, Available Driver Slots, Confirm Booking
+           ====================================================================== -->
+      <section class="dash-pane dash-pane-centered" id="book-driver">
+        <div class="dash-topbar">
+          <div>
+            <span class="eyebrow" style="margin-bottom:4px;">Direct Booking</span>
+            <h2>Book a Driver Immediately</h2>
+            <p style="color:var(--text-muted);">Reserve an experienced chauffeur directly from your customer account.</p>
+          </div>
+        </div>
+
+        <div class="dash-card" style="max-width:860px;">
+          <form id="dashBookingForm" style="display:flex; flex-direction:column; gap:20px;">
+            <div style="display:grid; grid-template-columns:1fr 1fr; gap:16px;" class="grid-2">
+              <div class="form-group">
+                <label for="dashBookService" class="form-label">Service Type *</label>
+                <select id="dashBookService" class="form-control" required>
+                  <option value="hourly">Hourly Driver (₹399/hr)</option>
+                  <option value="half-day">Half Day 4 Hours (₹1,299)</option>
+                  <option value="full-day" selected>Full Day 8 Hours (₹2,199)</option>
+                  <option value="outstation">Outstation Long Distance (₹2,899/day)</option>
+                  <option value="airport">Airport Pickup (₹1,499)</option>
+                  <option value="corporate">Corporate Chauffeur (₹449/hr)</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label for="dashBookVehicle" class="form-label">Vehicle Make / Model Preference *</label>
+                <input type="text" id="dashBookVehicle" class="form-control" placeholder="e.g. Mercedes E-Class, BMW 5, Innova Crysta" required>
+              </div>
+            </div>
+
+            <div style="display:grid; grid-template-columns:1fr 1fr; gap:16px;" class="grid-2">
+              <div class="form-group">
+                <label for="dashBookPickup" class="form-label">Pickup Location *</label>
+                <input type="text" id="dashBookPickup" class="form-control" placeholder="Residential Address / Office Tower" required>
+              </div>
+
+              <div class="form-group">
+                <label for="dashBookDrop" class="form-label">Drop-off Destination</label>
+                <input type="text" id="dashBookDrop" class="form-control" placeholder="Destination address or landmark">
+              </div>
+            </div>
+
+            <div class="grid-3" style="display:grid; grid-template-columns:1fr 1fr 1fr; gap:16px;">
+              <div class="form-group">
+                <label for="dashBookDate" class="form-label">Travel Date *</label>
+                <input type="date" id="dashBookDate" class="form-control" required>
+              </div>
+
+              <div class="form-group">
+                <label for="dashBookTime" class="form-label">Start Time *</label>
+                <input type="time" id="dashBookTime" class="form-control" value="09:00" required>
+              </div>
+
+              <div class="form-group">
+                <label for="dashBookHours" class="form-label">Number of Hours *</label>
+                <input type="number" id="dashBookHours" class="form-control" min="2" max="48" value="8" required>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="dashBookNotes" class="form-label">Additional Instructions / Driver Language Preference</label>
+              <textarea id="dashBookNotes" class="form-control" rows="2" placeholder="e.g. Require English-fluent driver in formal tie; client luggage assistance needed at terminal..."></textarea>
+            </div>
+
+            <!-- Price and Slot Preview -->
+            <div style="background:var(--color-soft-green); border:1px solid rgba(27, 79, 156,0.25); border-radius:var(--radius-lg); padding:20px; display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:16px;">
+              <div>
+                <span style="font-size:0.8rem; text-transform:uppercase; font-weight:700; color:var(--text-muted); display:block;">Estimated Trip Fare</span>
+                <strong id="dashEstPrice" style="font-size:2rem; color:var(--accent-primary); font-family:var(--font-heading);">₹2,199</strong>
+                <span style="display:block; font-size:0.8rem; color:var(--text-muted);">Includes driver honorarium, insurance & GST</span>
+              </div>
+
+              <div style="text-align:right;">
+                <span class="status-badge" style="color:var(--accent-emerald); font-size:0.85rem; margin-block-end:4px;">Available Driver Slots: 8 Chauffeurs Nearby</span>
+                <p style="font-size:0.8rem; color:var(--text-muted);">Immediate assignment upon submission</p>
+              </div>
+            </div>
+
+            <button type="submit" class="btn btn-primary btn-lg mobile-cta-btn" style="align-self:center;">
+              <span>Confirm Booking & Match Driver</span>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </button>
+          </form>
+        </div>
+      </section>
+
+      <!-- ======================================================================
+           PANE 3: MY BOOKINGS
+           Booking ID, Date, Service, Assigned Driver, Status, Duration, Amount
+           ====================================================================== -->
+      <section class="dash-pane" id="my-bookings">
+        <div class="dash-topbar">
+          <div>
+            <span class="eyebrow" style="margin-bottom:4px;">Trip Records</span>
+            <h2>My Bookings & Trip History</h2>
+            <p style="color:var(--text-muted);">Review your current active journeys and past completed reservations.</p>
+          </div>
+        </div>
+
+        <div class="dash-card">
+          <div class="table-responsive">
+            <table class="data-table">
+              <thead>
+                <tr>
+                  <th>Booking ID</th>
+                  <th>Date</th>
+                  <th>Service</th>
+                  <th>Assigned Driver</th>
+                  <th>Status</th>
+                  <th>Duration</th>
+                  <th>Amount</th>
+                </tr>
+              </thead>
+              <tbody id="myBookingsTableBody">
+                <tr>
+                  <td><strong>#DOH-9021</strong></td>
+                  <td>Today, 09:30 AM</td>
+                  <td>Full-Day Executive</td>
+                  <td>Rajesh Verma</td>
+                  <td><span class="status-pill status-confirmed">Confirmed</span></td>
+                  <td>8 Hours</td>
+                  <td><strong>₹2,199</strong></td>
+                </tr>
+                <tr>
+                  <td><strong>#DOH-8910</strong></td>
+                  <td>06 Nov 2026</td>
+                  <td>Airport Meet & Greet</td>
+                  <td>Gurpreet Singh</td>
+                  <td><span class="status-pill status-completed">Completed</span></td>
+                  <td>Point to Point</td>
+                  <td><strong>₹1,499</strong></td>
+                </tr>
+                <tr>
+                  <td><strong>#DOH-8840</strong></td>
+                  <td>28 Oct 2026</td>
+                  <td>Outstation (Jaipur 2 Days)</td>
+                  <td>Karthik Selvan</td>
+                  <td><span class="status-pill status-completed">Completed</span></td>
+                  <td>2 Days</td>
+                  <td><strong>₹6,198</strong></td>
+                </tr>
+                <tr>
+                  <td><strong>#DOH-8712</strong></td>
+                  <td>14 Oct 2026</td>
+                  <td>Hourly Driver</td>
+                  <td>Amit Sharma</td>
+                  <td><span class="status-pill status-completed">Completed</span></td>
+                  <td>4 Hours</td>
+                  <td><strong>₹1,299</strong></td>
+                </tr>
+                <tr>
+                  <td><strong>#DOH-8605</strong></td>
+                  <td>02 Oct 2026</td>
+                  <td>Corporate Delegation</td>
+                  <td>Vikram Rathore</td>
+                  <td><span class="status-pill status-completed">Completed</span></td>
+                  <td>12 Hours</td>
+                  <td><strong>₹3,197</strong></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+
+      <!-- ======================================================================
+           PANE 4: ASSIGNED DRIVERS
+           4 Cards with unique images:
+           1. images/image-20.png (Suresh Patil)
+           2. images/image-15.png (Kenji Takahashi)
+           3. images/image-58.png (Arun Nair)
+           4. images/image-64.png (Deepak Joshi)
+           ====================================================================== -->
+      <section class="dash-pane" id="assigned-drivers">
+        <div class="dash-topbar">
+          <div>
+            <span class="eyebrow" style="margin-bottom:4px;">Chauffeur Roster</span>
+            <h2>Assigned & Frequent Drivers</h2>
+            <p style="color:var(--text-muted);">Chauffeurs who have safely driven your vehicles or are allocated to your upcoming schedules.</p>
+          </div>
+        </div>
+
+        <div class="assigned-drivers-grid">
+          <!-- Driver 1: Suresh Patil (images/image-20.png) -->
+          <div class="assigned-driver-card">
+            <img src="images/image-20.png" alt="Suresh Patil, Indian chauffeur driving in city" class="assigned-driver-thumb" width="866" height="650">
+            <div class="assigned-driver-meta">
+              <div style="display:flex; justify-content:space-between; align-items:center;">
+                <h4 style="font-size:1.15rem; margin-bottom:0;">Suresh Patil</h4>
+                <span class="status-badge" style="color:var(--accent-emerald);">Assigned</span>
+              </div>
+              <span style="font-size:0.85rem; color:var(--accent-primary); font-weight:700;">City Commute & Family Specialist</span>
+              <p style="font-size:0.82rem; color:var(--text-muted); margin:4px 0 8px;"><strong>Experience:</strong> 11+ Years &bull; <strong>Languages:</strong> English, Hindi, Marathi</p>
+              <div class="assigned-driver-actions" style="display:flex; justify-content:space-between; align-items:center;">
+                <span style="font-weight:700; color:#E0A800; font-size:0.88rem;">★ 4.97 Rating</span>
+                <button type="button" class="btn btn-outline btn-sm" onclick="showToast('Contacting Suresh Patil: +91 98200 XXXXX');">Call Driver</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Driver 2: Kenji Takahashi (images/image-15.png) -->
+          <div class="assigned-driver-card">
+            <img src="images/image-15.png" alt="Kenji Takahashi, Driver in uniform cap and white gloves" class="assigned-driver-thumb" width="600" height="450">
+            <div class="assigned-driver-meta">
+              <div style="display:flex; justify-content:space-between; align-items:center;">
+                <h4 style="font-size:1.15rem; margin-bottom:0;">Kenji Takahashi</h4>
+                <span class="status-badge" style="color:var(--accent-emerald);">Frequent Chauffeur</span>
+              </div>
+              <span style="font-size:0.85rem; color:var(--accent-primary); font-weight:700;">Executive Protocol & VIP Escort</span>
+              <p style="font-size:0.82rem; color:var(--text-muted); margin:4px 0 8px;"><strong>Experience:</strong> 12+ Years &bull; <strong>Languages:</strong> English, Japanese</p>
+              <div class="assigned-driver-actions" style="display:flex; justify-content:space-between; align-items:center;">
+                <span style="font-weight:700; color:#E0A800; font-size:0.88rem;">★ 4.99 Rating</span>
+                <button type="button" class="btn btn-outline btn-sm" onclick="showToast('Contacting Kenji Takahashi: +91 98110 XXXXX');">Call Driver</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Driver 3: Arun Nair (images/image-58.png) -->
+          <div class="assigned-driver-card">
+            <img src="images/image-58.png" alt="Arun Nair, Driver in sunglasses cruising highway" class="assigned-driver-thumb" width="728" height="483">
+            <div class="assigned-driver-meta">
+              <div style="display:flex; justify-content:space-between; align-items:center;">
+                <h4 style="font-size:1.15rem; margin-bottom:0;">Arun Nair</h4>
+                <span class="status-badge" style="color:var(--accent-emerald);">Highway Certified</span>
+              </div>
+              <span style="font-size:0.85rem; color:var(--accent-primary); font-weight:700;">Intercity & Hill Station Specialist</span>
+              <p style="font-size:0.82rem; color:var(--text-muted); margin:4px 0 8px;"><strong>Experience:</strong> 14+ Years &bull; <strong>Languages:</strong> English, Hindi, Malayalam</p>
+              <div class="assigned-driver-actions" style="display:flex; justify-content:space-between; align-items:center;">
+                <span style="font-weight:700; color:#E0A800; font-size:0.88rem;">★ 4.98 Rating</span>
+                <button type="button" class="btn btn-outline btn-sm" onclick="showToast('Contacting Arun Nair: +91 97400 XXXXX');">Call Driver</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Driver 4: Deepak Joshi (images/image-64.png) -->
+          <div class="assigned-driver-card">
+            <img src="images/image-64.png" alt="Deepak Joshi, Chauffeur in white uniform with welcome basket beside sedan" class="assigned-driver-thumb" width="720" height="480">
+            <div class="assigned-driver-meta">
+              <div style="display:flex; justify-content:space-between; align-items:center;">
+                <h4 style="font-size:1.15rem; margin-bottom:0;">Deepak Joshi</h4>
+                <span class="status-badge" style="color:var(--accent-emerald);">Hospitality Awardee</span>
+              </div>
+              <span style="font-size:0.85rem; color:var(--accent-primary); font-weight:700;">Airport Welcome & Luxury Hospitality</span>
+              <p style="font-size:0.82rem; color:var(--text-muted); margin:4px 0 8px;"><strong>Experience:</strong> 9+ Years &bull; <strong>Languages:</strong> English, Hindi</p>
+              <div class="assigned-driver-actions" style="display:flex; justify-content:space-between; align-items:center;">
+                <span style="font-weight:700; color:#E0A800; font-size:0.88rem;">★ 4.96 Rating</span>
+                <button type="button" class="btn btn-outline btn-sm" onclick="showToast('Contacting Deepak Joshi: +91 99350 XXXXX');">Call Driver</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ======================================================================
+           PANE 5: INVOICES
+           Invoice Number, Booking ID, Date, Amount, Payment Status, View Invoice
+           ====================================================================== -->
+      <section class="dash-pane" id="invoices">
+        <div class="dash-topbar">
+          <div>
+            <span class="eyebrow" style="margin-bottom:4px;">Billing & Compliance</span>
+            <h2>Invoices & GST Receipts</h2>
+            <p style="color:var(--text-muted);">Download official GST tax invoices for corporate expense claims and personal records.</p>
+          </div>
+        </div>
+
+        <div class="dash-card">
+          <div class="table-responsive">
+            <table class="data-table">
+              <thead>
+                <tr>
+                  <th>Invoice #</th>
+                  <th>Booking ID</th>
+                  <th>Billing Date</th>
+                  <th>Amount</th>
+                  <th>Payment Status</th>
+                  <th>Action</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><strong>#INV-2026-0941</strong></td>
+                  <td>#DOH-9021</td>
+                  <td>10 Nov 2026</td>
+                  <td><strong>₹2,199.00</strong></td>
+                  <td><span class="status-pill status-confirmed">Paid via UPI</span></td>
+                  <td><button type="button" class="btn btn-outline btn-sm" onclick="showToast('Downloading GST PDF invoice #INV-2026-0941...');">Download PDF</button></td>
+                </tr>
+                <tr>
+                  <td><strong>#INV-2026-0882</strong></td>
+                  <td>#DOH-8910</td>
+                  <td>06 Nov 2026</td>
+                  <td><strong>₹1,499.00</strong></td>
+                  <td><span class="status-pill status-confirmed">Paid via Card</span></td>
+                  <td><button type="button" class="btn btn-outline btn-sm" onclick="showToast('Downloading GST PDF invoice #INV-2026-0882...');">Download PDF</button></td>
+                </tr>
+                <tr>
+                  <td><strong>#INV-2026-0810</strong></td>
+                  <td>#DOH-8840</td>
+                  <td>28 Oct 2026</td>
+                  <td><strong>₹6,198.00</strong></td>
+                  <td><span class="status-pill status-confirmed">Corporate Billed</span></td>
+                  <td><button type="button" class="btn btn-outline btn-sm" onclick="showToast('Downloading GST PDF invoice #INV-2026-0810...');">Download PDF</button></td>
+                </tr>
+                <tr>
+                  <td><strong>#INV-2026-0734</strong></td>
+                  <td>#DOH-8712</td>
+                  <td>14 Oct 2026</td>
+                  <td><strong>₹1,299.00</strong></td>
+                  <td><span class="status-pill status-confirmed">Paid via UPI</span></td>
+                  <td><button type="button" class="btn btn-outline btn-sm" onclick="showToast('Downloading GST PDF invoice #INV-2026-0734...');">Download PDF</button></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+
+      <!-- ======================================================================
+           PANE 6: PROFILE
+           ====================================================================== -->
+      <section class="dash-pane dash-pane-centered" id="profile">
+        <div class="dash-topbar">
+          <div>
+            <span class="eyebrow" style="margin-bottom:4px;">Account Preferences</span>
+            <h2>Profile & Notification Settings</h2>
+            <p style="color:var(--text-muted);">Manage your registered contact information, emergency contacts, and vehicle profiles.</p>
+          </div>
+        </div>
+
+        <div class="dash-card" style="max-width:720px;">
+          <form onsubmit="event.preventDefault(); showToast('Profile settings saved successfully!', 'success');" style="display:flex; flex-direction:column; gap:18px;">
+            <div style="display:grid; grid-template-columns:1fr 1fr; gap:16px;" class="grid-2">
+              <div class="form-group">
+                <label for="profName" class="form-label">Full Name</label>
+                <input type="text" id="profName" class="form-control" value="Vikramaditya Singhania" required>
+              </div>
+              <div class="form-group">
+                <label for="profEmail" class="form-label">Email Address</label>
+                <input type="email" id="profEmail" class="form-control" value="vikram@executive.com" required>
+              </div>
+            </div>
+
+            <div style="display:grid; grid-template-columns:1fr 1fr; gap:16px;" class="grid-2">
+              <div class="form-group">
+                <label for="profPhone" class="form-label">Primary Mobile</label>
+                <input type="tel" id="profPhone" class="form-control" value="+91 98101 23456" required>
+              </div>
+              <div class="form-group">
+                <label for="profCity" class="form-label">Home Base City</label>
+                <input type="text" id="profCity" class="form-control" value="New Delhi / NCR">
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="profVehicles" class="form-label">Registered Personal Vehicles (Optional)</label>
+              <input type="text" id="profVehicles" class="form-control" value="BMW 530d (2024), Toyota Innova Crysta ZX (2023)">
+              <small style="color:var(--text-muted);">Our dispatch algorithm automatically pairs drivers familiar with these vehicles.</small>
+            </div>
+
+            <button type="submit" class="btn btn-primary mobile-cta-btn" style="align-self:center;">
+              <span>Save Changes</span>
+            </button>
+          </form>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <!-- Scripts -->
+  <script src="assets/js/main.js"></script>
+  <script src="assets/js/dashboard.js"></script>
+</body>
+</html>

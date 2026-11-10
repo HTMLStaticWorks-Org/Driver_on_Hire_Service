@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Services — Driver on Hire Service</title>
+  <meta name="description" content="Explore our specialized chauffeur solutions: Personal drivers, hourly on-demand bookings, outstation highway trips, corporate delegations, and airport transfers.">
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='22' fill='%23FFFFFF'/><g transform='translate(5, 7.7) scale(0.9)'><path d='M15 67A40 40 0 1 1 86 64L79 59A32 32 0 1 0 21 62Z' fill='%230F294A'/><path d='M23 19A38 38 0 0 1 78 20A35 35 0 0 0 23 19Z' fill='%231B4F9C'/><path d='M16 40L14 48L25 51L26 46Z' fill='%230F294A'/><path d='M82 40L84 48L69 52L66 47Z' fill='%230F294A'/><path d='M46 43L52 35Q65 33 78 35L84 43L88 45L88 62L46 62Z' fill='%23FFFFFF'/><path d='M51 44L55 37Q65 35 76 37L80 44Z' fill='%230F294A'/><path d='M54 43L57 39Q65 38 74 39L77 43Z' fill='%23FFFFFF'/><rect x='47.5' y='41' width='4' height='3' rx='1' fill='%230F294A'/><rect x='79.5' y='41' width='4' height='3' rx='1' fill='%230F294A'/><path d='M48 45Q65 42 84 45L86 58Q86 61 82 61L48 61Z' fill='%230F294A'/><path d='M50 48L56 49L55 52L50 51Z' fill='%23FFFFFF'/><path d='M82 48L76 49L77 52L82 51Z' fill='%23FFFFFF'/><rect x='58' y='47.5' width='15' height='1.8' rx='0.9' fill='%23FFFFFF'/><rect x='58' y='50.5' width='15' height='1.8' rx='0.9' fill='%23FFFFFF'/><rect x='59' y='53.5' width='13' height='1.8' rx='0.9' fill='%23FFFFFF'/><rect x='56' y='57' width='19' height='2' rx='1' fill='%23FFFFFF'/><path d='M9 82L11 61Q15 55 21 53L19 31C19 20 47 20 47 31L45 53Q53 55 56 62L59 75Z' fill='%23FFFFFF'/><path d='M20 31C20 22 46 22 46 31L43 34L23 34Z' fill='%230F294A'/><path d='M23 29C25 24 41 24 43 29C39 27 27 27 23 29Z' fill='%231B4F9C'/><path d='M22 33Q33 31 44 33L43 35Q33 33 23 35Z' fill='%23FFFFFF'/><path d='M23 35Q33 39 43 35Q33 41 23 35Z' fill='%230F294A'/><path d='M23 37L23 47Q25 56 33 57Q41 56 43 47L43 37' fill='%23FFFFFF' stroke='%230F294A' stroke-width='2.2' stroke-linejoin='round'/><path d='M24 39H42V42Q42 46 38 46Q35 46 34 42H32Q31 46 28 46Q24 46 24 42Z' fill='%230F294A'/><path d='M10 80L12 63Q15 58 24 56L33 78L42 56Q51 58 54 63L57 74L22 84Z' fill='%230F294A'/><path d='M25 56L33 77L41 56Q33 59 25 56Z' fill='%23FFFFFF'/><path d='M31 59H35L36 63L33 78L30 63Z' fill='%232563EB'/><rect x='43' y='67' width='6' height='2' rx='1' fill='%23FFFFFF'/><path d='M6 92Q40 64 95 62L95 72Q60 76 50 94Z' fill='%23FFFFFF'/><path d='M10 90Q43 66 93 64Q51 70 25 89Z' fill='%2306B6D4'/><path d='M33 88Q53 71 91 66Q60 73 50 91Q42 87 33 88Z' fill='%230F294A'/></g></svg>">
+</head>
+<body>
+
+  <!-- ==========================================================================
+       CRITICAL NAVBAR (Reusable Component)
+       ========================================================================== -->
+  <header class="site-header">
+    <div class="container">
+      <nav class="navbar" aria-label="Main Navigation">
+        <a href="index.html" class="brand-logo" aria-label="Driver on Hire Service Home">
+          <div class="logo-badge">
+            <svg viewBox="0 0 100 94" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M15 67A40 40 0 1 1 86 64L79 59A32 32 0 1 0 21 62Z" fill="#0F294A"/><path d="M23 19A38 38 0 0 1 78 20A35 35 0 0 0 23 19Z" fill="#1B4F9C"/><path d="M16 40L14 48L25 51L26 46Z" fill="#0F294A"/><path d="M82 40L84 48L69 52L66 47Z" fill="#0F294A"/><path d="M46 43L52 35Q65 33 78 35L84 43L88 45L88 62L46 62Z" fill="#FFFFFF"/><path d="M51 44L55 37Q65 35 76 37L80 44Z" fill="#0F294A"/><path d="M54 43L57 39Q65 38 74 39L77 43Z" fill="#FFFFFF"/><rect x="47.5" y="41" width="4" height="3" rx="1" fill="#0F294A"/><rect x="79.5" y="41" width="4" height="3" rx="1" fill="#0F294A"/><path d="M48 45Q65 42 84 45L86 58Q86 61 82 61L48 61Z" fill="#0F294A"/><path d="M50 48L56 49L55 52L50 51Z" fill="#FFFFFF"/><path d="M82 48L76 49L77 52L82 51Z" fill="#FFFFFF"/><rect x="58" y="47.5" width="15" height="1.8" rx="0.9" fill="#FFFFFF"/><rect x="58" y="50.5" width="15" height="1.8" rx="0.9" fill="#FFFFFF"/><rect x="59" y="53.5" width="13" height="1.8" rx="0.9" fill="#FFFFFF"/><rect x="56" y="57" width="19" height="2" rx="1" fill="#FFFFFF"/><path d="M9 82L11 61Q15 55 21 53L19 31C19 20 47 20 47 31L45 53Q53 55 56 62L59 75Z" fill="#FFFFFF"/><path d="M20 31C20 22 46 22 46 31L43 34L23 34Z" fill="#0F294A"/><path d="M23 29C25 24 41 24 43 29C39 27 27 27 23 29Z" fill="#1B4F9C"/><path d="M22 33Q33 31 44 33L43 35Q33 33 23 35Z" fill="#FFFFFF"/><path d="M23 35Q33 39 43 35Q33 41 23 35Z" fill="#0F294A"/><path d="M23 37L23 47Q25 56 33 57Q41 56 43 47L43 37" fill="#FFFFFF" stroke="#0F294A" stroke-width="2.2" stroke-linejoin="round"/><path d="M24 39H42V42Q42 46 38 46Q35 46 34 42H32Q31 46 28 46Q24 46 24 42Z" fill="#0F294A"/><path d="M10 80L12 63Q15 58 24 56L33 78L42 56Q51 58 54 63L57 74L22 84Z" fill="#0F294A"/><path d="M25 56L33 77L41 56Q33 59 25 56Z" fill="#FFFFFF"/><path d="M31 59H35L36 63L33 78L30 63Z" fill="#2563EB"/><rect x="43" y="67" width="6" height="2" rx="1" fill="#FFFFFF"/><path d="M6 92Q40 64 95 62L95 72Q60 76 50 94Z" fill="#FFFFFF"/><path d="M10 90Q43 66 93 64Q51 70 25 89Z" fill="#06B6D4"/><path d="M33 88Q53 71 91 66Q60 73 50 91Q42 87 33 88Z" fill="#0F294A"/></svg>
+          </div>
+          <div class="brand-text">
+            <span class="brand-title">Driver on Hire</span>
+            <span class="brand-subtitle">Chauffeur Platform</span>
+          </div>
+        </a>
+
+        <!-- Desktop Navigation Links (>1024px) -->
+        <div class="nav-links-desktop">
+          <a href="index.html" class="nav-link">Home</a>
+          <a href="home-2.html" class="nav-link">Home 2</a>
+          <a href="about.html" class="nav-link">About</a>
+          <a href="services.html" class="nav-link active">Services</a>
+          <a href="pricing.html" class="nav-link">Pricing</a>
+          <a href="drivers.html" class="nav-link">Our Drivers</a>
+          <a href="contact.html" class="nav-link">Contact</a>
+          <a href="dashboard.html" class="nav-link" title="Customer Dashboard">Dashboard</a>
+        </div>
+
+        <!-- Desktop Action Controls (>1024px) -->
+        <div class="nav-actions-desktop">
+          <button type="button" class="control-toggle control-icon-only theme-toggle-btn" aria-label="Toggle dark mode" title="Toggle Dark Mode">
+            <span class="theme-icon" aria-hidden="true">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+            </span>
+          </button>
+
+          <button type="button" class="control-toggle control-icon-only rtl-toggle-btn" aria-label="Toggle text direction" title="Toggle RTL / LTR">
+            <span class="rtl-icon" aria-hidden="true">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 3 4 7l4 4"/><path d="M4 7h16"/><path d="m16 21 4-4-4-4"/><path d="M20 17H4"/></svg>
+            </span>
+          </button>
+
+          <a href="login.html" class="btn btn-primary btn-sm nav-cta-login">
+            <span>Login</span>
+          </a>
+        </div>
+
+        <!-- Mobile & Tablet Hamburger Button (<=1024px) -->
+        <button type="button" class="hamburger-btn" aria-label="Toggle navigation drawer" aria-expanded="false">
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+        </button>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ==========================================================================
+       SIDEBAR / DRAWER COMPONENT (Strict Sequence: Links -> Dashboard -> [Theme][RTL] -> CTA)
+       ========================================================================== -->
+  <div class="sidebar-overlay" aria-hidden="true"></div>
+  <aside class="site-sidebar" aria-label="Mobile Navigation Drawer">
+    <div class="sidebar-header">
+      <div class="brand-logo">
+        <div class="logo-badge">
+          <svg viewBox="0 0 100 94" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M15 67A40 40 0 1 1 86 64L79 59A32 32 0 1 0 21 62Z" fill="#0F294A"/><path d="M23 19A38 38 0 0 1 78 20A35 35 0 0 0 23 19Z" fill="#1B4F9C"/><path d="M16 40L14 48L25 51L26 46Z" fill="#0F294A"/><path d="M82 40L84 48L69 52L66 47Z" fill="#0F294A"/><path d="M46 43L52 35Q65 33 78 35L84 43L88 45L88 62L46 62Z" fill="#FFFFFF"/><path d="M51 44L55 37Q65 35 76 37L80 44Z" fill="#0F294A"/><path d="M54 43L57 39Q65 38 74 39L77 43Z" fill="#FFFFFF"/><rect x="47.5" y="41" width="4" height="3" rx="1" fill="#0F294A"/><rect x="79.5" y="41" width="4" height="3" rx="1" fill="#0F294A"/><path d="M48 45Q65 42 84 45L86 58Q86 61 82 61L48 61Z" fill="#0F294A"/><path d="M50 48L56 49L55 52L50 51Z" fill="#FFFFFF"/><path d="M82 48L76 49L77 52L82 51Z" fill="#FFFFFF"/><rect x="58" y="47.5" width="15" height="1.8" rx="0.9" fill="#FFFFFF"/><rect x="58" y="50.5" width="15" height="1.8" rx="0.9" fill="#FFFFFF"/><rect x="59" y="53.5" width="13" height="1.8" rx="0.9" fill="#FFFFFF"/><rect x="56" y="57" width="19" height="2" rx="1" fill="#FFFFFF"/><path d="M9 82L11 61Q15 55 21 53L19 31C19 20 47 20 47 31L45 53Q53 55 56 62L59 75Z" fill="#FFFFFF"/><path d="M20 31C20 22 46 22 46 31L43 34L23 34Z" fill="#0F294A"/><path d="M23 29C25 24 41 24 43 29C39 27 27 27 23 29Z" fill="#1B4F9C"/><path d="M22 33Q33 31 44 33L43 35Q33 33 23 35Z" fill="#FFFFFF"/><path d="M23 35Q33 39 43 35Q33 41 23 35Z" fill="#0F294A"/><path d="M23 37L23 47Q25 56 33 57Q41 56 43 47L43 37" fill="#FFFFFF" stroke="#0F294A" stroke-width="2.2" stroke-linejoin="round"/><path d="M24 39H42V42Q42 46 38 46Q35 46 34 42H32Q31 46 28 46Q24 46 24 42Z" fill="#0F294A"/><path d="M10 80L12 63Q15 58 24 56L33 78L42 56Q51 58 54 63L57 74L22 84Z" fill="#0F294A"/><path d="M25 56L33 77L41 56Q33 59 25 56Z" fill="#FFFFFF"/><path d="M31 59H35L36 63L33 78L30 63Z" fill="#2563EB"/><rect x="43" y="67" width="6" height="2" rx="1" fill="#FFFFFF"/><path d="M6 92Q40 64 95 62L95 72Q60 76 50 94Z" fill="#FFFFFF"/><path d="M10 90Q43 66 93 64Q51 70 25 89Z" fill="#06B6D4"/><path d="M33 88Q53 71 91 66Q60 73 50 91Q42 87 33 88Z" fill="#0F294A"/></svg>
+        </div>
+        <div class="brand-text">
+          <span class="brand-title">Driver on Hire</span>
+          <span class="brand-subtitle">Navigation</span>
+        </div>
+      </div>
+      <button type="button" class="sidebar-close-btn" aria-label="Close navigation drawer">✕</button>
+    </div>
+
+    <div class="sidebar-body">
+      <nav class="sidebar-nav-list">
+        <a href="index.html" class="sidebar-nav-link">Home 1</a>
+        <a href="home-2.html" class="sidebar-nav-link">Home 2</a>
+        <a href="about.html" class="sidebar-nav-link">About</a>
+        <a href="services.html" class="sidebar-nav-link active">Services</a>
+        <a href="pricing.html" class="sidebar-nav-link">Pricing</a>
+        <a href="drivers.html" class="sidebar-nav-link">Our Drivers</a>
+        <a href="contact.html" class="sidebar-nav-link">Contact</a>
+        
+        <div class="sidebar-divider"></div>
+        <a href="dashboard.html" class="sidebar-nav-link dashboard-link">
+          <span>📊 Customer Dashboard</span>
+          <span style="font-size:0.75rem; background:var(--accent-primary); color:#FFF; padding:2px 8px; border-radius:99px;">Live</span>
+        </a>
+        <a href="login.html" class="sidebar-nav-link">
+          <span>🔑 Login / Register</span>
+        </a>
+      </nav>
+
+      <div class="sidebar-controls-row">
+        <button type="button" class="sidebar-control-btn theme-toggle-btn">
+          <span class="theme-icon" aria-hidden="true"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg></span>
+          <span class="theme-text">Dark Mode</span>
+        </button>
+        <button type="button" class="sidebar-control-btn rtl-toggle-btn">
+          <span class="rtl-icon" aria-hidden="true"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 3 4 7l4 4"/><path d="M4 7h16"/><path d="m16 21 4-4-4-4"/><path d="M20 17H4"/></svg></span>
+          <span class="rtl-text">RTL</span>
+        </button>
+      </div>
+
+      <div class="sidebar-cta-wrap">
+        <button type="button" class="btn btn-primary sidebar-cta-btn" data-open-modal="booking">
+          <span>🚗 Book a Driver</span>
+        </button>
+      </div>
+
+      <div class="sidebar-footer-note">
+        <p>Premium Certified Chauffeur Platform</p>
+      </div>
+    </div>
+  </aside>
+
+  <main id="main-content">
+    <!-- ==========================================================================
+         SECTION 01 — SERVICES HERO (Centered with Background Image)
+         Image: images/image-39.png (Chauffeur in suit greeting female traveler with handshake at airport)
+         ========================================================================== -->
+    <section class="page-hero" style="background-image: url('images/image-39.png');">
+      <div class="page-hero-overlay"></div>
+      <div class="container">
+        <div class="page-hero-content page-hero-content-wide reveal">
+          <span class="eyebrow">Professional Driver Services</span>
+          <h1>Comprehensive Driver Solutions <br class="hero-break">Crafted for Every Need</h1>
+          <p class="lead">From spontaneous hourly city errands to executive airport transfers and cross-country road trips, choose a specialized driving service customized to your vehicle, schedule, and passenger comfort.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         SECTION 02 — PERSONAL DRIVER
+         Image: images/image-16.png (Friendly Indian chauffeur in uniform driving Toyota car with warm smile)
+         ========================================================================== -->
+    <section class="section section-alt" id="personal-driver">
+      <div class="container">
+        <div style="display:grid; grid-template-columns:1.05fr 0.95fr; gap:clamp(32px, 5vw, 64px); align-items:center;" class="hero-grid-1">
+          <div class="reveal">
+            <span class="eyebrow">Dedicated Chauffeur</span>
+            <h2>Personal Driver for Daily Commute & Family</h2>
+            <p class="lead">Transform your private car into an oasis of relaxation with a dedicated personal chauffeur who manages your family's daily transportation.</p>
+            <p style="margin-block:14px 20px;">Say goodbye to morning rush-hour exhaustion. Your personal chauffeur reports directly to your home residence, opens doors, safely transports your children to school, takes elderly family members to medical appointments, and picks you up from the office punctually.</p>
+            
+            <div style="background:var(--bg-card); padding:20px; border-radius:var(--radius-md); border:1px solid var(--color-border); margin-block-end:24px;">
+              <div class="grid-2" style="display:grid; grid-template-columns:1fr 1fr; gap:14px;">
+                <div>
+                  <small style="color:var(--text-muted); display:block; font-size:0.75rem; text-transform:uppercase;">Suitable Duration</small>
+                  <strong style="color:var(--heading-color);">Full Day (8–10 hrs) or Monthly</strong>
+                </div>
+                <div>
+                  <small style="color:var(--text-muted); display:block; font-size:0.75rem; text-transform:uppercase;">Standard Pricing</small>
+                  <strong style="color:var(--accent-primary); font-size:1.15rem;">₹399 / hr &bull; ₹2,199 / day</strong>
+                </div>
+              </div>
+            </div>
+
+            <ul style="display:flex; flex-direction:column; gap:8px; margin-block-end:24px; font-size:0.92rem;">
+              <li><strong style="color:var(--accent-emerald);">✓</strong> Doorstep residential reporting 15 minutes before departure</li>
+              <li><strong style="color:var(--accent-emerald);">✓</strong> Thoroughly versed in family care, courtesy, and child safety</li>
+              <li><strong style="color:var(--accent-emerald);">✓</strong> Vehicle fluid check and exterior dusting included upon arrival</li>
+            </ul>
+
+            <button type="button" class="btn btn-primary mobile-cta-btn" data-open-modal="booking" data-service="full-day">Book Personal Driver</button>
+          </div>
+
+          <div class="reveal">
+            <img src="images/image-16.png" alt="Friendly Indian chauffeur in uniform with shoulder epaulettes driving Toyota car, looking back with a warm welcoming smile" class="service-feature-img" style="aspect-ratio:4/3; object-position:center 22%;" width="500" height="500">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         SECTION 03 — HOURLY DRIVER
+         Image: images/image-48.png (Chauffeur in sunglasses assisting female passenger getting into modern black Mercedes S-Class)
+         ========================================================================== -->
+    <section class="section" id="hourly-driver">
+      <div class="container">
+        <div style="display:grid; grid-template-columns:0.95fr 1.05fr; gap:clamp(32px, 5vw, 64px); align-items:center;" class="hero-grid-1">
+          <div class="reveal">
+            <img src="images/image-48.png" alt="Chauffeur in sunglasses assisting female passenger in white jacket getting into modern black Mercedes S-Class sedan" class="service-feature-img" style="aspect-ratio:4/3; object-position:center 20%;" width="1000" height="1000">
+          </div>
+
+          <div class="reveal">
+            <span class="eyebrow">On-Demand Flexibility</span>
+            <h2>Hourly Driver for Dining, Shopping & Errands</h2>
+            <p class="lead">Need a reliable driver for just a couple of hours? Our hourly driver service offers maximum flexibility without full-day commitments.</p>
+            <p style="margin-block:14px 20px;">Whether attending an evening cocktail dinner, heading to a bustling shopping district where parking is impossible, or attending back-to-back city meetings, our chauffeur remains with your car at every stop.</p>
+            
+            <div style="background:var(--bg-secondary); padding:20px; border-radius:var(--radius-md); border:1px solid var(--color-border); margin-block-end:24px;">
+              <div class="grid-2" style="display:grid; grid-template-columns:1fr 1fr; gap:14px;">
+                <div>
+                  <small style="color:var(--text-muted); display:block; font-size:0.75rem; text-transform:uppercase;">Suitable Duration</small>
+                  <strong style="color:var(--heading-color);">2 to 6 Hours Flexible</strong>
+                </div>
+                <div>
+                  <small style="color:var(--text-muted); display:block; font-size:0.75rem; text-transform:uppercase;">Standard Pricing</small>
+                  <strong style="color:var(--accent-primary); font-size:1.15rem;">₹399 / hr (Min 2 hrs)</strong>
+                </div>
+              </div>
+            </div>
+
+            <ul style="display:flex; flex-direction:column; gap:8px; margin-block-end:24px; font-size:0.92rem;">
+              <li><strong style="color:var(--accent-emerald);">✓</strong> Driver stays on standby during your appointments</li>
+              <li><strong style="color:var(--accent-emerald);">✓</strong> Unlimited multiple stops within metropolitan limits</li>
+              <li><strong style="color:var(--accent-emerald);">✓</strong> Zero parking hunt stress — driver drops you right at the door</li>
+            </ul>
+
+            <button type="button" class="btn btn-primary mobile-cta-btn" data-open-modal="booking" data-service="hourly">Book Hourly Driver</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         SECTION 04 — OUTSTATION DRIVER
+         Images: 
+         - images/image-17.png (Indian driver leaning against Toyota Innova Crysta with Indian flag)
+         - images/image-56.png (Outstation cab driver in blue uniform shirt with Mahindra Marazzo cab)
+         ========================================================================== -->
+    <section class="section section-alt" id="outstation-driver">
+      <div class="container">
+        <div style="display:grid; grid-template-columns:1fr 1fr; gap:clamp(32px, 5vw, 64px); align-items:center;" class="hero-grid-1">
+          <div class="reveal">
+            <span class="eyebrow">Intercity & Highway Journeys</span>
+            <h2>Outstation Driver for Long Distance & Hill Road Trips</h2>
+            <p class="lead">Turn grueling highway drives into memorable family vacations. Our highway-certified chauffeurs are seasoned masters of state expressways and mountain ghats.</p>
+            <p style="margin-block:14px 20px;">Whether embarking on a weekend pilgrimage, exploring hill stations like Shimla, Ooty, or Mahabaleshwar, or attending a destination wedding in another state, our drivers handle night drives, toll gates, and treacherous mountain hairpins with supreme confidence.</p>
+            
+            <div style="background:var(--bg-card); padding:20px; border-radius:var(--radius-md); border:1px solid var(--color-border); margin-block-end:24px;">
+              <div class="grid-2" style="display:grid; grid-template-columns:1fr 1fr; gap:14px;">
+                <div>
+                  <small style="color:var(--text-muted); display:block; font-size:0.75rem; text-transform:uppercase;">Suitable Duration</small>
+                  <strong style="color:var(--heading-color);">1 to 14 Calendar Days</strong>
+                </div>
+                <div>
+                  <small style="color:var(--text-muted); display:block; font-size:0.75rem; text-transform:uppercase;">Standard Pricing</small>
+                  <strong style="color:var(--accent-primary); font-size:1.15rem;">₹2,899 / day + ₹400 night</strong>
+                </div>
+              </div>
+            </div>
+
+            <ul style="display:flex; flex-direction:column; gap:8px; margin-block-end:24px; font-size:0.92rem;">
+              <li><strong style="color:var(--accent-emerald);">✓</strong> Certified for high-speed expressway safety & ghat curves</li>
+              <li><strong style="color:var(--accent-emerald);">✓</strong> Expert knowledge of highway fuel stops, clean dhabas & emergency clinics</li>
+              <li><strong style="color:var(--accent-emerald);">✓</strong> 24/7 centralized GPS monitoring & technical breakdown dispatch support</li>
+            </ul>
+
+            <button type="button" class="btn btn-primary mobile-cta-btn" data-open-modal="booking" data-service="outstation">Book Outstation Driver</button>
+          </div>
+
+          <!-- Dual Image Feature for Outstation -->
+          <div class="reveal service-outstation-stack">
+            <img src="images/image-17.png" alt="Indian driver in white shirt and sunglasses leaning against white Toyota Innova Crysta with Indian flag" class="service-outstation-img" style="aspect-ratio:16/10; object-position:center 24%;" width="1280" height="853">
+            <img src="images/image-56.png" alt="Professional outstation cab driver in blue uniform standing proudly beside white Mahindra MPV on highway" class="service-outstation-img" style="aspect-ratio:16/10; object-position:center 18%;" width="1024" height="1024">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         SECTION 05 — CORPORATE & AIRPORT SERVICES
+         Images:
+         - images/image-40.png (Chauffeur loading luggage for business travelers)
+         - images/image-44.png (VIP Meet & Greet concierge opening Mercedes door)
+         ========================================================================== -->
+    <section class="section" id="corporate-airport">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="eyebrow">Executive Class</span>
+          <h2>Corporate Fleet Chauffeurs & Airport VIP Transfers</h2>
+          <p>Elevate your enterprise reputation with impeccable executive chauffeurs who represent your brand with distinction.</p>
+        </div>
+
+        <div class="grid-2">
+          <!-- Corporate Service Card -->
+          <div class="premium-card reveal">
+            <div class="card-img-wrap">
+              <img src="images/image-40.png" alt="Chauffeur in business suit carefully loading luggage into trunk of Mercedes S-Class for business couple at airport" width="1536" height="1024">
+              <span class="card-badge">Corporate Chauffeur</span>
+            </div>
+            <div class="card-body">
+              <h3 class="card-title">Corporate Executive Chauffeurs</h3>
+              <p class="card-desc">Suited drivers trained in business etiquette, absolute client confidentiality, and seamless navigation between commercial hubs and financial centers. Monthly corporate billing available.</p>
+              <div style="background:var(--bg-secondary); padding:14px; border-radius:var(--radius-md); margin-block-end:18px; font-size:0.88rem;">
+                <strong>Pricing:</strong> ₹2,199 / 8 hrs &bull; Customized monthly corporate retainer contracts available.
+              </div>
+              <div class="card-footer">
+                <button type="button" class="btn btn-primary btn-sm btn-full" data-open-modal="booking" data-service="corporate">Book Corporate Chauffeur</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Airport Service Card -->
+          <div class="premium-card reveal">
+            <div class="card-img-wrap">
+              <img src="images/image-44.png" alt="VIP Meet and Greet concierge holding welcome board and opening door of black Mercedes at airport arrival gate" width="744" height="496">
+              <span class="card-badge">Flight Tracked</span>
+            </div>
+            <div class="card-body">
+              <h3 class="card-title">Airport Curbside Meet & Greet</h3>
+              <p class="card-desc">Say goodbye to stressful airport pickups. Our chauffeur tracks your flight in real time, waits curbside with an electronic name placard, and takes full charge of your luggage.</p>
+              <div style="background:var(--bg-secondary); padding:14px; border-radius:var(--radius-md); margin-block-end:18px; font-size:0.88rem;">
+                <strong>Pricing:</strong> ₹1,499 flat rate &bull; 60 minutes complimentary flight delay waiting time included.
+              </div>
+              <div class="card-footer">
+                <button type="button" class="btn btn-primary btn-sm btn-full" data-open-modal="booking" data-service="airport">Book Airport Transfer</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         SECTION 06 — SERVICE BOOKING CTA
+         Image: images/image-50.png (Chauffeur holding door open for business lady with tablet outside airport terminal)
+         ========================================================================== -->
+    <section class="section section-dark" style="position:relative; overflow:hidden;">
+      <div class="container" style="position:relative; z-index:2;">
+        <div style="display:grid; grid-template-columns:1fr 1fr; gap:clamp(32px, 5vw, 64px); align-items:center;" class="hero-grid-1">
+          <div class="reveal">
+            <span class="eyebrow" style="background:rgba(255,255,255,0.15); color:#FFFFFF;">Reserve in Seconds</span>
+            <h2 style="font-size:clamp(2rem, 4vw, 3rem); margin-block:16px 20px;">Ready to Book Your Specialized Chauffeur?</h2>
+            <p style="font-size:1.1rem; line-height:1.7; margin-block-end:32px;">Choose your service category and let our certified drivers provide a safe, punctual, and relaxing journey.</p>
+            <div class="cta-btn-group" style="display:flex; gap:16px; flex-wrap:wrap;">
+              <button type="button" class="btn btn-white btn-lg" data-open-modal="booking">Book a Driver Now</button>
+              <a href="pricing.html" class="btn btn-outline btn-lg" style="color:#FFFFFF; border-color:rgba(255,255,255,0.5);">Compare Pricing Plans</a>
+            </div>
+          </div>
+
+          <div class="reveal">
+            <img src="images/image-50.png" alt="Chauffeur in grey suit holding car door open for business lady carrying tablet outside modern airport terminal" class="service-feature-img" style="aspect-ratio:16/10; object-position:center 22%;" width="971" height="637">
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ==========================================================================
+       SHARED REUSABLE FOOTER
+       ========================================================================== -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <div class="brand-logo" style="color:#FFFFFF; margin-block-end:16px;">
+            <div class="logo-badge">
+              <svg viewBox="0 0 100 94" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M15 67A40 40 0 1 1 86 64L79 59A32 32 0 1 0 21 62Z" fill="#0F294A"/><path d="M23 19A38 38 0 0 1 78 20A35 35 0 0 0 23 19Z" fill="#1B4F9C"/><path d="M16 40L14 48L25 51L26 46Z" fill="#0F294A"/><path d="M82 40L84 48L69 52L66 47Z" fill="#0F294A"/><path d="M46 43L52 35Q65 33 78 35L84 43L88 45L88 62L46 62Z" fill="#FFFFFF"/><path d="M51 44L55 37Q65 35 76 37L80 44Z" fill="#0F294A"/><path d="M54 43L57 39Q65 38 74 39L77 43Z" fill="#FFFFFF"/><rect x="47.5" y="41" width="4" height="3" rx="1" fill="#0F294A"/><rect x="79.5" y="41" width="4" height="3" rx="1" fill="#0F294A"/><path d="M48 45Q65 42 84 45L86 58Q86 61 82 61L48 61Z" fill="#0F294A"/><path d="M50 48L56 49L55 52L50 51Z" fill="#FFFFFF"/><path d="M82 48L76 49L77 52L82 51Z" fill="#FFFFFF"/><rect x="58" y="47.5" width="15" height="1.8" rx="0.9" fill="#FFFFFF"/><rect x="58" y="50.5" width="15" height="1.8" rx="0.9" fill="#FFFFFF"/><rect x="59" y="53.5" width="13" height="1.8" rx="0.9" fill="#FFFFFF"/><rect x="56" y="57" width="19" height="2" rx="1" fill="#FFFFFF"/><path d="M9 82L11 61Q15 55 21 53L19 31C19 20 47 20 47 31L45 53Q53 55 56 62L59 75Z" fill="#FFFFFF"/><path d="M20 31C20 22 46 22 46 31L43 34L23 34Z" fill="#0F294A"/><path d="M23 29C25 24 41 24 43 29C39 27 27 27 23 29Z" fill="#1B4F9C"/><path d="M22 33Q33 31 44 33L43 35Q33 33 23 35Z" fill="#FFFFFF"/><path d="M23 35Q33 39 43 35Q33 41 23 35Z" fill="#0F294A"/><path d="M23 37L23 47Q25 56 33 57Q41 56 43 47L43 37" fill="#FFFFFF" stroke="#0F294A" stroke-width="2.2" stroke-linejoin="round"/><path d="M24 39H42V42Q42 46 38 46Q35 46 34 42H32Q31 46 28 46Q24 46 24 42Z" fill="#0F294A"/><path d="M10 80L12 63Q15 58 24 56L33 78L42 56Q51 58 54 63L57 74L22 84Z" fill="#0F294A"/><path d="M25 56L33 77L41 56Q33 59 25 56Z" fill="#FFFFFF"/><path d="M31 59H35L36 63L33 78L30 63Z" fill="#2563EB"/><rect x="43" y="67" width="6" height="2" rx="1" fill="#FFFFFF"/><path d="M6 92Q40 64 95 62L95 72Q60 76 50 94Z" fill="#FFFFFF"/><path d="M10 90Q43 66 93 64Q51 70 25 89Z" fill="#06B6D4"/><path d="M33 88Q53 71 91 66Q60 73 50 91Q42 87 33 88Z" fill="#0F294A"/></svg>
+            </div>
+            <span class="brand-title" style="color:#FFFFFF;">Driver on Hire</span>
+          </div>
+          <p class="footer-desc">Driver on Hire Service provides vetted, punctual, and professional chauffeurs for personal, corporate, airport, and outstation journeys across India.</p>
+          <div class="social-links">
+            <a href="#" class="social-link" aria-label="Facebook" title="Facebook">
+              <svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M14 13.5h2.5l1-4H14v-2c0-1.03 0-2 2-2h1.5V2.14c-.326-.043-1.557-.14-2.857-.14C11.928 2 10 3.657 10 6.7v2.8H7v4h3V22h4v-8.5z"/></svg>
+            </a>
+            <a href="#" class="social-link" aria-label="X (Twitter)" title="X (Twitter)">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+            </a>
+            <a href="#" class="social-link" aria-label="LinkedIn" title="LinkedIn">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+            </a>
+            <a href="#" class="social-link" aria-label="Instagram" title="Instagram">
+              <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h5>Quick Links</h5>
+          <div class="footer-links">
+            <a href="index.html" class="footer-link">Home 1</a>
+            <a href="home-2.html" class="footer-link">Home 2</a>
+            <a href="about.html" class="footer-link">About Us</a>
+            <a href="services.html" class="footer-link">Services</a>
+            <a href="pricing.html" class="footer-link">Pricing Plans</a>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h5>Services</h5>
+          <div class="footer-links">
+            <a href="services.html#personal-driver" class="footer-link">Personal Driver</a>
+            <a href="services.html#hourly-driver" class="footer-link">Hourly Booking</a>
+            <a href="services.html#outstation-driver" class="footer-link">Outstation Trips</a>
+            <a href="services.html#corporate-airport" class="footer-link">Airport Transfers</a>
+            <a href="services.html#corporate-airport" class="footer-link">Corporate Chauffeur</a>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h5>Platform</h5>
+          <div class="footer-links">
+            <a href="drivers.html#driver-profiles" class="footer-link">Our Drivers</a>
+            <a href="dashboard.html" class="footer-link">Customer Dashboard</a>
+            <a href="login.html" class="footer-link">Sign In / Register</a>
+            <a href="contact.html#faq" class="footer-link">Support & FAQ</a>
+            <a href="pricing.html#comparison" class="footer-link">Booking Policies</a>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h5>Stay Updated</h5>
+          <p style="font-size:0.85rem; color:rgba(255,255,255,0.7); margin-block-end:14px;">Subscribe for exclusive outstation packages and holiday travel discounts.</p>
+          <form onsubmit="event.preventDefault(); showToast('Thank you for subscribing to Driver on Hire updates!', 'success'); this.reset();" style="display:flex; flex-direction:column; gap:10px;">
+            <input type="email" placeholder="Your email address" required style="padding:10px 14px; border-radius:var(--radius-md); background:rgba(255,255,255,0.1); border:1px solid rgba(255,255,255,0.2); color:#FFFFFF; font-size:0.9rem;">
+            <button type="submit" class="btn btn-primary btn-sm" style="background:var(--color-fresh);">Subscribe Now</button>
+          </form>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2026 Driver on Hire Service Platform. All rights reserved.</p>
+        <p>24/7 Verified Private Chauffeurs Across India &bull; Licensed &amp; Background Screened</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- SHARED BOOKING MODAL -->
+  <div class="modal-overlay" id="bookingModal" role="dialog" aria-modal="true" aria-labelledby="modalTitleServices">
+    <div class="modal-dialog">
+      <div class="modal-header">
+        <div>
+          <h3 id="modalTitleServices" style="font-size:1.35rem; margin-block-end:4px;">Book a Specialized Driver</h3>
+          <p style="font-size:0.85rem; color:var(--text-muted);">Instant matching with a verified local chauffeur</p>
+        </div>
+        <button type="button" class="modal-close-btn" aria-label="Close modal">✕</button>
+      </div>
+      <div class="modal-body">
+        <form id="bookingModalForm" style="display:flex; flex-direction:column; gap:18px;">
+          <div class="form-group">
+            <label for="bookingModalService" class="form-label">Service Type</label>
+            <select id="bookingModalService" class="form-control" required>
+              <option value="hourly">Hourly Driver (₹399/hr)</option>
+              <option value="half-day">Half Day 4 Hours (₹1,299)</option>
+              <option value="full-day">Full Day 8 Hours (₹2,199)</option>
+              <option value="outstation">Outstation Driver (₹2,899/day)</option>
+              <option value="airport">Airport Pickup (₹1,499)</option>
+              <option value="corporate">Corporate Chauffeur (₹449/hr)</option>
+            </select>
+          </div>
+
+          <div class="grid-2" style="display:grid; grid-template-columns:1fr 1fr; gap:14px;">
+            <div class="form-group">
+              <label for="bookingModalPickup" class="form-label">Pickup Address</label>
+              <input type="text" id="bookingModalPickup" class="form-control" placeholder="House / Hotel / Landmark" required>
+            </div>
+            <div class="form-group">
+              <label for="bookingModalDrop" class="form-label">Destination</label>
+              <input type="text" id="bookingModalDrop" class="form-control" placeholder="City / Locality" required>
+            </div>
+          </div>
+
+          <div class="grid-3" style="display:grid; grid-template-columns:1fr 1fr 1fr; gap:12px;">
+            <div class="form-group">
+              <label for="bookingModalDate" class="form-label">Date</label>
+              <input type="date" id="bookingModalDate" class="form-control" required>
+            </div>
+            <div class="form-group">
+              <label for="bookingModalTime" class="form-label">Start Time</label>
+              <input type="time" id="bookingModalTime" class="form-control" value="09:00" required>
+            </div>
+            <div class="form-group">
+              <label for="bookingModalHours" class="form-label">Hours</label>
+              <input type="number" id="bookingModalHours" class="form-control" min="2" max="48" value="4" required>
+            </div>
+          </div>
+
+          <div style="background:var(--color-soft-green); border:1px solid rgba(27, 79, 156,0.2); padding:16px; border-radius:var(--radius-md); display:flex; justify-content:space-between; align-items:center;">
+            <div>
+              <span style="font-size:0.8rem; text-transform:uppercase; font-weight:700; color:var(--text-muted); display:block;">Estimated Total</span>
+              <strong id="bookingModalEstimate" style="font-size:1.6rem; color:var(--accent-primary); font-family:var(--font-heading);">₹1,299</strong>
+            </div>
+            <span style="font-size:0.8rem; color:var(--text-muted); text-align:right;">Zero Hidden Charges<br>Taxes & GST Included</span>
+          </div>
+
+          <button type="submit" class="btn btn-primary btn-lg" style="width:100%;">
+            <span>Confirm & Match Driver</span>
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
+
